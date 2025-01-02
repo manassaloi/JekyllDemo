@@ -1,0 +1,62 @@
+header {
+  background: #1a1a1a;
+  padding: 1rem;
+}
+
+.site-title {
+  margin-bottom: 1rem;
+}
+
+.site-title a {
+  color: #f26f54;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.left-nav a {
+  color: #f26f54;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.right-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #f26f54;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Hover effects */
+.site-nav a:hover,
+.main-nav a:hover {
+  color: #ff8f7d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .site-nav,
+  .main-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .right-nav {
+    margin-top: 1rem;
+  }
+} 
