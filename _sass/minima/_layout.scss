@@ -335,6 +335,9 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    position: relative;
+    width: 32px;
+    height: 32px;
     
     &:hover {
       background-color: var(--grey-color-light);
@@ -352,6 +355,26 @@
     line-height: 1;
     display: block;
     user-select: none;
+    position: absolute;
+    transition: opacity 0.2s ease;
+
+    &--light {
+      opacity: 1;
+    }
+    
+    &--dark {
+      opacity: 0;
+    }
+  }
+
+  [data-theme="dark"] & {
+    .theme-switcher__icon--light {
+      opacity: 0;
+    }
+    
+    .theme-switcher__icon--dark {
+      opacity: 1;
+    }
   }
 
   @media screen and (max-width: $on-medium) {

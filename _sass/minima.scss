@@ -78,6 +78,11 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+// Disable transitions during page load
+.preload * {
+  transition: none !important;
+}
+
 a {
   color: var(--link-color);
   

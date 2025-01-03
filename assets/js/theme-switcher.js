@@ -1,3 +1,6 @@
+// Add preload class to body initially
+document.body.classList.add('preload');
+
 function setTheme(theme) {
   // Apply theme immediately
   document.documentElement.setAttribute('data-theme', theme);
@@ -6,16 +9,6 @@ function setTheme(theme) {
   
   // Store theme
   localStorage.setItem('theme', theme);
-  updateThemeIcon(theme);
-  
-  // Debug output
-  console.log('Theme set to:', theme);
-  const html = document.documentElement;
-  console.log('CSS Variables:', {
-    background: getComputedStyle(html).getPropertyValue('--background-color'),
-    text: getComputedStyle(html).getPropertyValue('--text-color'),
-    link: getComputedStyle(html).getPropertyValue('--link-color')
-  });
 }
 
 function toggleTheme() {
@@ -24,18 +17,13 @@ function toggleTheme() {
   setTheme(newTheme);
 }
 
-function updateThemeIcon(theme) {
-  const icon = document.getElementById('theme-icon');
-  if (icon) {
-    icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-  }
-}
-
-// Initialize theme immediately when script loads
+// Initialize theme
 const savedTheme = localStorage.getItem('theme') || 'light';
 setTheme(savedTheme);
 
-// Also set on DOMContentLoaded to ensure all elements are updated
-document.addEventListener('DOMContentLoaded', () => {
-  setTheme(savedTheme);
+// Remove preload class after page load
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    document.body.classList.remove('preload');
+  });
 });
