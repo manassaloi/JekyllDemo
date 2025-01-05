@@ -3,7 +3,7 @@
 // First, define all static SCSS color variables
 $base-text-color: #111 !default;
 $base-background-color: #fdfdfd !default;
-$base-link-color: #f26f54 !default;
+$base-link-color: #0E54C5 !default;
 $base-grey-color: #828282 !default;
 
 // Define other base variables
@@ -19,8 +19,8 @@ $table-text-align: left !default;
 $grey-color:       $base-grey-color !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
-$brand-color:      #2a7ae2 !default;
-$orange-color:     #f66a0a !default;
+$brand-color:      #0E54C5 !default;
+// $orange-color:     #f66a0a !default;
 
 // Layout variables
 $content-width:    800px !default;
@@ -42,7 +42,7 @@ $on-large:         $on-laptop !default;
 [data-theme="dark"] {
   --background-color: #1a1a1a;
   --text-color: #f5f5f5;
-  --link-color: #ff8f7d;
+  --link-color: #6EFE50;
   --grey-color: #{$grey-color};
   --grey-color-light: #404040;
   --grey-color-dark: #dfdfdf;
@@ -85,7 +85,7 @@ body {
 
 a {
   color: var(--link-color);
-  
+
   &:visited {
     color: var(--link-color);
   }
@@ -99,7 +99,7 @@ a {
 .site-nav {
   background-color: var(--background-color);
   border-color: var(--grey-color-light);
-  
+
   .page-link {
     color: var(--link-color);
   }
@@ -110,11 +110,11 @@ table {
   text-align: $table-text-align;
   color: var(--text-color);
   border-color: var(--grey-color-light);
-  
+
   th {
     background-color: var(--grey-color-light);
   }
-  
+
   tr:nth-child(even) {
     background-color: var(--grey-color-light);
   }

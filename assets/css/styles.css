@@ -43,23 +43,25 @@ header {
   font-size: 1.2rem;
 }
 
-/* Hover effects */
+/* Hover effects
 .site-nav a:hover,
 .main-nav a:hover {
   color: #ff8f7d;
 }
 
-/* Responsive design */
+*/
+
+/* Responsive design
 @media (max-width: 768px) {
   .site-nav,
   .main-nav {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .right-nav {
     margin-top: 1rem;
   }
-} 
+}
 
 */
